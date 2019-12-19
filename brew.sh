@@ -109,5 +109,13 @@ brew install mysql
 
 brew install python3
 
+brew cask install anaconda
+brew cask install google-drive-file-stream
+brew cask install keepassxc
+brew cask install sloth
+brew cask install suspicious-package
+brew cask install vagrant
+brew cask install virtualbox
+
 # Remove outdated versions from the cellar.
 brew cleanup
