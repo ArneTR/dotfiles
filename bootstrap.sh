@@ -26,3 +26,5 @@ else
 	fi;
 fi;
 unset doIt;
+
+echo "Done. Remember to run brew.sh and .macos. Also copy SSH and GPG keys and .ssh/config from keystore / backup"
