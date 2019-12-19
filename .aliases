@@ -146,3 +146,21 @@ alias reload="exec ${SHELL} -l"
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
+
+# Arne
+
+alias cls="echo -ne '\033]50;ClearScrollback\a'"
+alias brave="/Applications/Brave\ Browser.app/Contents/MacOS/Brave\ Browser --disable-webtorrent-extension"
+
+alias netstat_real="sudo lsof -i -n -P"
+
+alias vu='cd ~/Sites/homestead-nachsenden && vagrant up && vagrant ssh'
+alias vssh='vagrant ssh'
+
+alias nachsenden='cd ~/Sites/nachsenden'
+alias panel='cd ~/Sites/nachsenden/panel.post-auftragsservice.de'
+alias shared='cd ~/Sites/nachsenden/shared'
+alias nachsenden.info='cd ~/Sites/nachsenden/nachsenden.info'
+
+alias subl="open -a Sublime\ Text.app"
+

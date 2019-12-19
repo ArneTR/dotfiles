@@ -1,5 +1,6 @@
 {
-	"color_scheme": "Packages/Color Scheme - Default/Solarized (Dark).tmTheme",
+    "color_scheme": "Packages/User/SublimeLinter/Afterglow-monokai (SL).tmTheme",
+  "theme": "Adaptive.sublime-theme",
 	"default_encoding": "UTF-8",
 	"default_line_ending": "unix",
 	"detect_indentation": false,
@@ -34,8 +35,21 @@
 	],
 	"show_encoding": true,
 	"show_line_endings": true,
-	"tab_size": 2,
-	"translate_tabs_to_spaces": false,
+	"tab_size": 4,
 	"trim_trailing_white_space_on_save": true,
-	"word_wrap": true
+	"word_wrap": true,
+
+
+    "bold_folder_labels": true,
+    "caret_style": "smooth",
+    "dpi_scale": 1.3,
+    "font_size": 15,
+    "highlight_line": true,
+    "ignored_packages":
+    [
+      "Vintage"
+    ],
+    "translate_tabs_to_spaces": true,
+    "trim_trailing_white_space_on_save": true,
+    "use_tab_stops": false
 }
