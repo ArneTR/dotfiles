@@ -108,6 +108,7 @@ brew install trash
 brew install mysql
 
 brew install python3
+pip3 install numpy
 
 brew cask install anaconda
 brew cask install google-drive-file-stream

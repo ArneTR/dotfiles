@@ -13,6 +13,9 @@ export NODE_REPL_MODE='sloppy';
 # Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
 export PYTHONIOENCODING='UTF-8';
 
+# Set a PYTHONPATH ... might change in the future though
+export PYTHONPATH="${PYTHONPATH}:/usr/local/lib/python3.7/site-packages:/usr/lib/python3.7/site-packages"
+
 # Increase Bash history size. Allow 32³ entries; the default is 500.
 export HISTSIZE='32768';
 export HISTFILESIZE="${HISTSIZE}";
