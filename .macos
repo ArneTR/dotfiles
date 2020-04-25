@@ -176,42 +176,54 @@ sudo systemsetup -settimezone "Europe/Berlin" > /dev/null
 # Energy saving                                                               #
 ###############################################################################
 
-# Enable lid wakeup
-sudo pmset -a lidwake 1
-
-# Restart automatically on power loss
-sudo pmset -a autorestart 1
+# Note: systemsetup handles values with attached to power source
+#       pmset handles values when on battery
+# Hibernation settings are made exclusively in pmset
 
 # Restart automatically if the computer freezes
 sudo systemsetup -setrestartfreeze on
 
-# Sleep the display after 15 minutes
-sudo pmset -a displaysleep 5
 
-# Disable machine sleep while charging
-# sudo pmset -c sleep 0
+# Enable lid wakeup
+sudo pmset -a lidwake 1
 
-# Set machine sleep to 5 minutes on battery
-sudo pmset -b sleep 5
+# Restart automatically on power loss
+sudo pmset -a autorestart 0
 
-# Set standby delay to 24 hours (default is 1 hour)
-sudo pmset -a standbydelay 86400
 
-# Never go into computer sleep mode
-sudo systemsetup -setcomputersleep Off > /dev/null
+# Sleep the display after 10 minutes
+sudo pmset -a displaysleep 10
+sudo systemsetup -setdisplaysleep 10
+
+# Set machine sleep to 15 minutes on battery
+sudo pmset -b sleep 15
+sudo systemsetup -setcomputersleep 15
+
+# Set standby delay to 15 Minutes (default is 1 hour)
+sudo pmset -a standbydelay 900
+
 
 # Hibernation mode
 # 0: Disable hibernation (speeds up entering sleep mode)
-# 3: Copy RAM to disk so the system state can still be restored in case of a
-#    power failure.
-sudo pmset -a hibernatemode 0
+# 3: Copy RAM to disk and keep memory powered
+#  so the system state can still be restored in case of a power failure.
+# 25: Copy RAM to disk and unpower memory
+sudo pmset -a hibernatemode 25
 
 # Remove the sleep image file to save disk space
-sudo rm /private/var/vm/sleepimage
+# sudo rm /private/var/vm/sleepimage
 # Create a zero-byte file instead…
-sudo touch /private/var/vm/sleepimage
+# sudo touch /private/var/vm/sleepimage
 # …and make sure it can’t be rewritten
-sudo chflags uchg /private/var/vm/sleepimage
+# sudo chflags uchg /private/var/vm/sleepimage
+
+# activate halfdim between sleep modes
+sudo pmset halfdim 1
+
+sudo pmset ttyskeepawake 0
+
+# destroy File Vault keys on standby
+sudo pmset destroyfvkeyonstandby 1
 
 ###############################################################################
 # Screen                                                                      #
@@ -219,7 +231,7 @@ sudo chflags uchg /private/var/vm/sleepimage
 
 # Require password immediately after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -int 1
-defaults write com.apple.screensaver askForPasswordDelay -int 15
+defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 # Save screenshots to the desktop
 defaults write com.apple.screencapture location -string "${HOME}/Desktop"

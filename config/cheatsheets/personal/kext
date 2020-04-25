@@ -1,0 +1,13 @@
+# This shows help for the kext toolchain
+
+
+
+# to list all kexts
+kextstat
+
+# unload a kext
+com.google.drivefs.filesystems.dfsfuse
+
+# filter non apple kext 
+kextstat | awk '!/com.apple/'
+
