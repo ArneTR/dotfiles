@@ -51,6 +51,7 @@ export PATH="$PATH:$HOME/.composer/vendor/bin"
 # Homebrew
 export HOMEBREW_NO_INSECURE_REDIRECT=1
 export HOMEBREW_CASK_OPTS=--require-sha
+export PATH="/usr/local/sbin:$PATH"
 
 # Cheat
 export CHEAT_CONFIG_PATH="~/dotfiles/config/cheat.yml"
