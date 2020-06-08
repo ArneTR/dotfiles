@@ -166,3 +166,4 @@ alias nachsenden.info='cd ~/Sites/nachsenden/nachsenden.info'
 
 alias subl="open -a Sublime\ Text.app"
 
+alias p3="python3"
