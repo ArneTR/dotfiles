@@ -165,5 +165,6 @@ alias shared='cd ~/Sites/nachsenden/shared'
 alias nachsenden.info='cd ~/Sites/nachsenden/nachsenden.info'
 
 alias subl="open -a Sublime\ Text.app"
-
+alias r="r --no-save"
 alias p3="python3"
+
