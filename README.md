@@ -83,6 +83,13 @@ When setting up a new Mac, you may want to install some common [Homebrew](https:
 
 Some of the functionality of these dotfiles depends on formulae installed by `brew.sh`. If you don’t plan to run `brew.sh`, you should look carefully through the script and manually install any particularly important ones. A good example is Bash/Git completion: the dotfiles use a special version from Homebrew.
 
+
+## Disabling unneeded LaunchAgents and LaunchDaemons
+
+- Boot into Recovery with Command+R
+- Then mount Macintosh HD with Disk Utility.app
+- Then use Terminal from the top bar - Utitlities to execute disable.sh
+
 ## Feedback
 
 Suggestions/improvements
