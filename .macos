@@ -201,6 +201,11 @@ sudo systemsetup -setcomputersleep 15
 
 # Set standby delay to 15 Minutes (default is 1 hour)
 sudo pmset -a standbydelay 900
+sudo pmset -a standby 1
+
+sudo pmset -a autopoweroff 1
+sudo pmset -a autopoweroffdelay 800
+
 
 
 # Hibernation mode
