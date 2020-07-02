@@ -131,13 +131,13 @@ TODISABLE+=('com.apple.telephonyutilities.callservicesd' \
   'com.apple.amp.mediasharingd' \
   'com.apple.mediaanalysisd' \
   'com.apple.mediaremoteagent' \
-  'com.apple.remindd' \
   'com.apple.keyboardservicesd' \
   'com.apple.telephonyutilities.callservicesd' \
   'com.apple.mobileassetd' \
   'com.apple.knowledge-agent')
 
 #  'com.apple.CalendarAgent' \ needed
+#  'com.apple.remindd' \ needed
 
 
 for agent in "${TODISABLE[@]}"
