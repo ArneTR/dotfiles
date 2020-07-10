@@ -192,23 +192,30 @@ sudo pmset -a lidwake 1
 # Restart automatically on power loss
 sudo pmset -a autorestart 0
 
-
 # Sleep the display after 10 minutes
 sudo pmset -a displaysleep 10
 sudo systemsetup -setdisplaysleep 10
 
-# Set machine sleep to 15 minutes on battery
-sudo pmset -b sleep 15
-sudo systemsetup -setcomputersleep 15
+# Set machine sleep to 10 minutes on battery
+sudo pmset -a sleep 10
+sudo systemsetup -setcomputersleep 10
 
 # Set standby delay to 15 Minutes (default is 1 hour)
+# standby means hibernation
 sudo pmset -a standbydelay 900
 sudo pmset -a standby 1
 
 sudo pmset -a autopoweroff 1
-sudo pmset -a autopoweroffdelay 800
+sudo pmset -a autopoweroffdelay 1000
 
-
+sudo pmset -a powernap 0
+sudo pmset -a networkoversleep 0
+sudo pmset -a womp 0
+sudo pmset -a ttyskeepawake 0
+sudo pmset -a proximitywake 0
+sudo pmset -a acwake 0
+sudo pmset -a ring 0
+sudo pmset -a tcpkeepalive 0
 
 # Hibernation mode
 # 0: Disable hibernation (speeds up entering sleep mode)
@@ -225,12 +232,10 @@ sudo pmset -a hibernatemode 25
 # sudo chflags uchg /private/var/vm/sleepimage
 
 # activate halfdim between sleep modes
-sudo pmset halfdim 1
-
-sudo pmset ttyskeepawake 0
+sudo pmset -a halfdim 1
 
 # destroy File Vault keys on standby
-sudo pmset destroyfvkeyonstandby 1
+sudo pmset -a destroyfvkeyonstandby 1
 
 ###############################################################################
 # Screen                                                                      #
