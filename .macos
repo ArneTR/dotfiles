@@ -193,8 +193,8 @@ sudo pmset -a lidwake 1
 sudo pmset -a autorestart 0
 
 # Sleep the display after 10 minutes
-sudo pmset -a displaysleep 10
-sudo systemsetup -setdisplaysleep 10
+sudo pmset -a displaysleep 5
+sudo systemsetup -setdisplaysleep 5
 
 # Set machine sleep to 10 minutes on battery
 sudo pmset -a sleep 10
