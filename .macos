@@ -193,20 +193,20 @@ sudo pmset -a lidwake 1
 sudo pmset -a autorestart 0
 
 # Sleep the display after 10 minutes
-sudo pmset -a displaysleep 5
-sudo systemsetup -setdisplaysleep 5
+sudo pmset -a displaysleep 15
+sudo systemsetup -setdisplaysleep 15
 
 # Set machine sleep to 10 minutes on battery
-sudo pmset -a sleep 10
-sudo systemsetup -setcomputersleep 10
+sudo pmset -a sleep 20
+sudo systemsetup -setcomputersleep 20
 
-# Set standby delay to 15 Minutes (default is 1 hour)
+# Set standby delay to 24 Minutes (default is 1 hour)
 # standby means hibernation
-sudo pmset -a standbydelay 900
+sudo pmset -a standbydelay 1500
 sudo pmset -a standby 1
 
 sudo pmset -a autopoweroff 1
-sudo pmset -a autopoweroffdelay 1000
+sudo pmset -a autopoweroffdelay 1600
 
 sudo pmset -a powernap 0
 sudo pmset -a networkoversleep 0
