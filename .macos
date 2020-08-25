@@ -119,6 +119,23 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 #sudo rm -rf /System/Library/CoreServices/DefaultDesktop.jpg
 #sudo ln -s /path/to/your/image /System/Library/CoreServices/DefaultDesktop.jpg
 
+
+###############################################################################
+# Firewall
+###############################################################################
+
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setloggingmode on
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setstealthmode on
+
+# Disable allow signed built-in applications automatically
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setallowsigned off
+
+# Disable allow signed downloaded applications automatically
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setallowsignedapp off
+
+# restart
+sudo pkill -HUP socketfilterfw
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################
