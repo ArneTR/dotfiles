@@ -134,6 +134,9 @@ sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setallowsigned off
 # Disable allow signed downloaded applications automatically
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setallowsignedapp off
 
+# finally disable all connections, which should technically include the preceding options
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw  --setblockall on
+
 # restart
 sudo pkill -HUP socketfilterfw
 ###############################################################################
