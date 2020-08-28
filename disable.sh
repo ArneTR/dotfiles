@@ -69,14 +69,16 @@ TODISABLE+=('com.apple.siriknowledged' \
 # VoiceOver / accessibility-related stuff
 TODISABLE+=('com.apple.VoiceOver' \
   'com.apple.voicememod' \
-  'com.apple.accessibility.AXVisualSupportAgent' \
   'com.apple.accessibility.dfrhud' \
   'com.apple.accessibility.heard')
 
+#  'com.apple.accessibility.AXVisualSupportAgent' \ needed for zoom
+
+
 # Quicklook
-TODISABLE+=('com.apple.quicklook.ui.helper' \
-  'com.apple.quicklook.ThumbnailsAgent' \
-  'com.apple.quicklook')
+#TODISABLE+=('com.apple.quicklook.ui.helper' \
+#  'com.apple.quicklook.ThumbnailsAgent' \
+#  'com.apple.quicklook')
 
 # Sidecar
 TODISABLE+=('com.apple.sidecar-hid-relay' \
@@ -138,6 +140,14 @@ TODISABLE+=('com.apple.telephonyutilities.callservicesd' \
 
 #  'com.apple.CalendarAgent' \ needed
 #  'com.apple.remindd' \ needed
+
+# routined -- A daemon that learns the historical location patterns of a user.
+# routined is a per-user daemon that learns historical location patterns of a user and predicts future visits to locations.
+TODISABLE+=('com.apple.routined.plist')
+
+# something with apple media
+TODISABLE+=('com.apple.amsaccountsd.plist')
+
 
 
 for agent in "${TODISABLE[@]}"
