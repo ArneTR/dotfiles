@@ -64,3 +64,4 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 #  ChallengeResponseAuthentication no
 #  HashKnownHosts yes
 #  UseKeyChain no
+echo "Done loading .bash_profile. If you need help with commands, remember: $ cheat"
