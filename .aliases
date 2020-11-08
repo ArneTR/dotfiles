@@ -168,3 +168,4 @@ alias subl="open -a Sublime\ Text.app"
 alias r="r --no-save"
 alias p3="python3"
 
+alias locate="locate -d ~/db/locate.database"
