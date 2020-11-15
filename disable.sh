@@ -102,7 +102,6 @@ TODISABLE+=('com.apple.telephonyutilities.callservicesd' \
   'com.apple.parsecd' \
   'com.apple.AOSPushRelay' \
   'com.apple.AOSHeartbeat' \
-  'com.apple.AirPlayUIAgent' \
   'com.apple.AirPortBaseStationAgent' \
   'com.apple.familycircled' \
   'com.apple.familycontrols.useragent' \
@@ -138,6 +137,7 @@ TODISABLE+=('com.apple.telephonyutilities.callservicesd' \
   'com.apple.mobileassetd' \
   'com.apple.knowledge-agent')
 
+#  'com.apple.AirPlayUIAgent' \ Want to use it
 #  'com.apple.CalendarAgent' \ needed
 #  'com.apple.remindd' \ needed
 
