@@ -98,9 +98,6 @@ brew install tree
 brew install vbindiff
 brew install zopfli
 
-brew install chromedriver
-brew install geckodriver
-
 brew install iphyton
 
 brew install trash
@@ -110,13 +107,21 @@ brew install mysql
 brew install python3
 pip3 install numpy
 
-brew cask install anaconda
-brew cask install google-drive-file-stream
 brew cask install keepassxc
 brew cask install sloth
 brew cask install suspicious-package
 brew cask install vagrant
 brew cask install virtualbox
+brew cask install virtualbox-extension-pack
+brew cask install alfred
+brew cask install rectangle
+brew cask install rstudio
+brew cask install arduino
+brew cask install cryptomator
+brew cask install disk-arbitrator
+brew cask install joplin
+brew cask install vagrant
+brew cask install nextcloud
 
 # Remove outdated versions from the cellar.
 brew cleanup
