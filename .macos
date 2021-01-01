@@ -212,13 +212,17 @@ sudo pmset -a lidwake 1
 # Restart automatically on power loss
 sudo pmset -a autorestart 0
 
-# Sleep the display after 10 minutes
+###### OLD CONFIG WITH TOTAL KEY CLEARING #####
+
 sudo pmset -a displaysleep 15
 sudo systemsetup -setdisplaysleep 15
 
 # Set machine sleep to 10 minutes on battery
 sudo pmset -a sleep 20
 sudo systemsetup -setcomputersleep 20
+
+# Sleep the display after 10 minutes
+
 
 # Set standby delay to 24 Minutes (default is 1 hour)
 # standby means hibernation
@@ -256,6 +260,19 @@ sudo pmset -a halfdim 1
 
 # destroy File Vault keys on standby
 sudo pmset -a destroyfvkeyonstandby 1
+
+######## OLD CONFIG END
+
+### ALTERNATE CONFIG FOR MORE FUN WITH COMPUTER ####
+sudo pmset -a hibernatemode 3
+sudo pmset -a standbydelay 0
+sudo pmset -a standby 0
+
+sudo pmset -a autopoweroff 0
+sudo pmset -a autopoweroffdelay 0
+sudo pmset -a destroyfvkeyonstandby 0
+
+#### ALTERNAET CONFIG END ######
 
 ###############################################################################
 # Screen                                                                      #
